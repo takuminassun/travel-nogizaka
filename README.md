@@ -69,7 +69,7 @@ Things you may want to cover:
 - belongs_to :user
 - belongs_to :member
 
-##　comments_membersテーブル
+## comments_membersテーブル
 |Column|Type|Options|
 |------|----|-------|
 |comment_id|integer|null: false, foreign_key: true|
