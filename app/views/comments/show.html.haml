@@ -1,0 +1,13 @@
+.contents
+  .content
+    .content__info
+      .content__left-name
+        - @comment.member.each do |m|
+          = m.name
+      .content__right-place
+        = @comment.place
+    .image
+      = image_tag@comment.image
+    .comments
+      .comment
+        = @comment.text
