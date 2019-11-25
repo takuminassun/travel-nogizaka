@@ -1,4 +1,6 @@
 class CommentsController < ApplicationController
+  
+
   def index
     @comments = Comment.all
   end
@@ -37,4 +39,6 @@ class CommentsController < ApplicationController
     def comment_params
       params.require(:comment).permit(:place, :text, :image, { :member_ids => [] })
     end
+
+    
 end

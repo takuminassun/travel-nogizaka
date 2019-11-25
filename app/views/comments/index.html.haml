@@ -1,7 +1,6 @@
 .contents
   - @comments.each do |comment|
     .content
-      =link_to '削除', "comments/#{comment.id}", method: :delete
       .content__left
         .content__left--place
           = comment.place
