@@ -1,0 +1,13 @@
+.contents
+  - @comments.each do |comment|
+    .content
+      =link_to '削除', "comments/#{comment.id}", method: :delete
+      .content__left
+        .content__left--place
+          = comment.place
+      .content__right
+        .content__right-name
+          - comment.member.each do |member|
+            = member.name
+      =link_to '詳細', "comments/#{comment.id}", method: :get
+            

@@ -1,0 +1,8 @@
+.contents
+  .form
+    = form_for @comment do |f|
+      = f.collection_check_boxes :member_ids, Member.all, :id, :name
+      = f.text_field :place, class: 'form__place', placeholder: '観光地を入力してください'
+      = f.text_area :text, class: 'form__review', placeholder: '感想(コメント)を入力してください'
+      = f.text_field :image, class: 'form__image', placeholder: '画像のURLを貼り付けてください'
+      = f.submit

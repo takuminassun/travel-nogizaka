@@ -3,7 +3,7 @@ class CreateComments < ActiveRecord::Migration[5.2]
     create_table :comments do |t|
       t.string :place     ,null: false
       t.text :text        ,null: false
-      t.string :inage_url ,null: false
+      t.string :image , null: true
       t.timestamps
     end
   end
