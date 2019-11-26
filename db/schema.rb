@@ -10,14 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_22_073723) do
+ActiveRecord::Schema.define(version: 2019_11_26_032229) do
 
   create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "place", null: false
+    t.integer "user_id"
     t.text "text", null: false
     t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "likes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "comment_id"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["comment_id"], name: "index_likes_on_comment_id"
+    t.index ["user_id"], name: "index_likes_on_user_id"
   end
 
   create_table "member_comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -33,15 +43,6 @@ ActiveRecord::Schema.define(version: 2019_11_22_073723) do
     t.string "name", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "user_comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.bigint "user_id"
-    t.bigint "comment_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["comment_id"], name: "index_user_comments_on_comment_id"
-    t.index ["user_id"], name: "index_user_comments_on_user_id"
   end
 
   create_table "user_members", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -63,10 +64,10 @@ ActiveRecord::Schema.define(version: 2019_11_22_073723) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "likes", "comments"
+  add_foreign_key "likes", "users"
   add_foreign_key "member_comments", "comments"
   add_foreign_key "member_comments", "members"
-  add_foreign_key "user_comments", "comments"
-  add_foreign_key "user_comments", "users"
   add_foreign_key "user_members", "members"
   add_foreign_key "user_members", "users"
 end

@@ -1,0 +1,35 @@
+<div class="contents">
+  <div class="content">
+    <div class="content__info">
+      <div class="content__left-name">
+        <% @comment.member.each do |m| %>
+          <%= m.name %>
+        <% end %>
+      </div>
+      <div class="content__right-place">
+        <%= @comment.place %>
+      </div>
+    </div>
+    <div class="image">
+      <%= image_tag@comment.image %>
+    </div>
+    <div class="comments">
+      <div class="comment">
+        <%= @comment.text %>
+      </div>
+    </div>
+    <h3>いいね件数: <%= @comment.likes.count %></h3>
+    <% if current_user.already_liked?(@comment) %>
+      <%= button_to 'いいねを取り消す', comment_like_path(@comment), method: :delete %>
+    <% else %>
+      <%= button_to 'いいね', comment_likes_path(@comment) %>
+    <% end %>
+    <h2>いいねしたユーザー</h2>
+    <% @comment.liked_users.each do |user| %>
+      <li><%= user.email %></li>
+    <% end %>
+    <%# <%= render "likes/like", collection: @comment %> 
+  </div>
+</div>
+
+
