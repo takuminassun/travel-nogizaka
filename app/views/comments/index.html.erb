@@ -1,0 +1,19 @@
+<div class="contents">
+  <% @comments.each do |comment| %>
+    <div class="content">
+      <div class="content__left">
+        <div class="content__left--place">
+          <%= comment.place %>
+        </div>
+      </div>
+      <div class="content__right">
+        <div class="content__right-name">
+          <% comment.member.each do |member| %>
+            <%= member.name %>
+          <% end %>
+        </div>
+      </div>
+      <%= link_to '詳細', "comments/#{comment.id}", method: :get %>
+    </div>
+  <% end %>
+</div>

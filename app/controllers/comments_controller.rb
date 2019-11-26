@@ -1,12 +1,11 @@
 class CommentsController < ApplicationController
   
+  before_action :authenticate_user!, only: [:create, :show]
 
   def index
     @comments = Comment.all
+    @comment = Comment.new
   end
-
-  # def show
-  # end
 
   def new
     @comment = Comment.new
@@ -14,8 +13,10 @@ class CommentsController < ApplicationController
   end
 
   def create
-    @comment = Comment.new(comment_params)
     # binding.pry
+    @comment = Comment.new(comment_params)
+    @comment.user_id = current_user.id
+    
     if @comment.save
       redirect_to comments_path
     else
@@ -25,6 +26,7 @@ class CommentsController < ApplicationController
 
   def show
     @comment = Comment.find(params[:id])
+    @like = Like.new
   end
 
   def update
@@ -39,6 +41,5 @@ class CommentsController < ApplicationController
     def comment_params
       params.require(:comment).permit(:place, :text, :image, { :member_ids => [] })
     end
-
     
 end

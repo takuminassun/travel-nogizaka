@@ -1,0 +1,39 @@
+<div class="wrapper">
+  <div class="contents">
+    <div class="header">
+      <% if user_signed_in? %>
+        <div class="user_nav grid-6">
+          <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+          <%= link_to 'post', new_comment_path  %>
+        </div>
+      <% else %>
+        <div class="grid-6">
+          <%= link_to "ログイン", new_user_session_path %>
+          <%= link_to "新規登録", new_user_registration_path %>
+        </div>
+      <% end %>
+    </div>
+    <div class="content">
+      <div class="content__left">
+        <%= link_to 'search', comments_path %>
+      </div>
+      <div class="content__right"></div>
+    </div>
+    <div class="sliders">
+      <div class="slider">
+        <div>
+          <img alt="image01" src="https://s.eximg.jp/exnews/feed/Tabizine/Tabizine_7447_1.jpg"/>
+        </div>
+        <div>
+          <img alt="image02" src="https://contents.oricon.co.jp/upimg/news/20160427/2070814_201604270532839001461742677c.jpg"/>
+        </div>
+        <div>
+          <img alt="image03" src="https://thetv.jp/i/nw/208677/1275468.jpg?w=615"/>
+        </div>
+        <div>
+          <img alt="image04" src="http://cdn-ak.f.st-hatena.com/images/fotolife/m/matsukazuto/20121013/20121013234341.jpg"/>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
