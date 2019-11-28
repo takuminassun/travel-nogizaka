@@ -1,0 +1,5 @@
+<%= @member.name %>
+<% @member.member_comments.each do |m| %>
+  <%= m.comment.place %>
+  <%= link_to "詳細を見る", comment_path %>
+<% end %>

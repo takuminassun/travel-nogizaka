@@ -1,4 +1,10 @@
 class FavoritesController < ApplicationController
+
+  def index
+    @members = Member.all
+  end
+
+
   def create
     @user_id = current_user.id
     @member_id = Member.find(params[:id]).id

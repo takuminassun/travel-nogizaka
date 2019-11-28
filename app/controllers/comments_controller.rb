@@ -18,7 +18,7 @@ class CommentsController < ApplicationController
     @comment.user_id = current_user.id
     
     if @comment.save
-      redirect_to comments_path
+      redirect_to user_path(current_user.id)
     else
       render :new
     end
