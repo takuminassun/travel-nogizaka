@@ -1,3 +1,13 @@
 <div class = "header">
-  推しメン設定
+  推しメン
 </div>
+<ul class="select">
+  Member: 
+  <% @user.favorites.each do |favorites| %>
+    <%= favorites.member.name %>
+    <%= link_to "詳細を見る", "#"%>
+  <% end %>
+  <%# <div class="like_member">
+      <%= link_to "推しメン設定", users_path(@user) %>
+  <%# </div> %> 
+</ul>

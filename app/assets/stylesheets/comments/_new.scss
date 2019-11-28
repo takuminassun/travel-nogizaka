@@ -1,0 +1,29 @@
+.contents{
+  height: 100vh;
+  width: 100vw;
+  
+  .form{
+    height: 100%;
+    width: 100%;
+    background-image: url('https://image.space.rakuten.co.jp/d/strg/ctrl/9/7e638a58cc50a550601eb934589ff532b9b9f6c1.10.2.9.2.jpeg');
+    background-repeat: no-repeat;
+    padding: 0 20px;
+    .member{
+      width: 70%;
+      height: 300px;
+      padding: 0px;
+    }
+    
+    label{
+      height: 80px;
+      width: 80%;
+      border: solid;
+    }
+    .form__place{
+      position: relative;
+      width: 500px;
+      height: 50px;
+      margin: 0 auto;
+    }
+  }
+}
