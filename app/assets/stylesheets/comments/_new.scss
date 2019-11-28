@@ -1,35 +1,29 @@
-// .contents{
-//   width: 80%;
-//   height: 100vh;
-//   background-color:#9966CC;
-//   margin: 0 auto;
-//   .content{
-//     width: 600px;
-//     margin: 0 auto;
-//     .form-place{
-//       width: 300px;
-//       height: 30px;
-//       margin: 50px auto;
-//     }
-//     .form-member{
-//       width: 300px;
-//       height: 30px;
-//       margin: 50px auto;
-//     }
-//     .form-review{
-//       width: 300px;
-//       height: 60px;
-//       margin: 50px auto;
-//     }
-//     .form-image{
-//       width: 600px;
-//       height: 30px;
-//       margin: 50px auto;
-//     }
-//     .form-send{
-//       width: 100px;
-//       height: 100px;
-//     }
-//   }
+.contents{
+  height: 100vh;
+  width: 100vw;
   
-// }
+  .form{
+    height: 100%;
+    width: 100%;
+    background-image: url('https://image.space.rakuten.co.jp/d/strg/ctrl/9/7e638a58cc50a550601eb934589ff532b9b9f6c1.10.2.9.2.jpeg');
+    background-repeat: no-repeat;
+    padding: 0 20px;
+    .member{
+      width: 70%;
+      height: 300px;
+      padding: 0px;
+    }
+    
+    label{
+      height: 80px;
+      width: 80%;
+      border: solid;
+    }
+    .form__place{
+      position: relative;
+      width: 500px;
+      height: 50px;
+      margin: 0 auto;
+    }
+  }
+}
