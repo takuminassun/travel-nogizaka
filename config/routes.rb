@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   resources :users
   resources :members 
-  resources :favorites, only: [:index] do 
+  resources :favorites, only: [:index, :destroy] do 
     member do
       post "add", to: "favorites#create"
     end

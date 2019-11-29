@@ -1,0 +1,26 @@
+.members{
+  height: 100vh;
+  background: -moz-linear-gradient(top left, #993399, #fff); 
+  background: -webkit-linear-gradient(top left,  #993399, #fff);
+  background: linear-gradient(to bottom right, #993399, #fff);
+  .member-index{
+    font-size: 35px;
+    padding-left: 50px;
+    padding-top: 50px;
+  }
+  .member-selects{
+  
+    h1{
+      margin: 0 auto;
+      width: 30%;
+      font-size: 20px;
+      padding: 10px 0px;
+      display: flex;
+      justify-content: space-between;
+      a{
+        color: blueviolet;
+      }
+    }
+  }
+}
+

@@ -4,6 +4,14 @@
       <div class="header-name">
         <%= @user.name %>
       </div>
+      <div class="header-right">
+        <div class="header-post">
+        <%= link_to '投稿する', new_comment_path  %>
+        </div>
+        <div class="header-search">
+          <%= link_to '投稿から探す', comments_path %>
+        </div>
+      </div>
     </div>
     <div class="member">
     <div class="member__index">
@@ -15,12 +23,12 @@
     </div>
     <ul class="select">
     <% @user.favorites.each do |favorites| %>
-      <%=  %>
-      <%= link_to "#{favorites.member.name} ←", member_path(favorites.member.id) %>
+      <%= link_to "#{favorites.member.name} → ", member_path(favorites.member.id) %>
+      <td><%= link_to "推しメンから外す" , favorite_path(favorites.id), method: :delete %></td>
     <% end %>
     </ul>
-    <div class="footer"></div>
-      <%= link_to '投稿する', new_comment_path  %>
+    <div class="footer">
+      
     </div>
   </div>
 </div>

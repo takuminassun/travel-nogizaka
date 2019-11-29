@@ -6,5 +6,6 @@ class MembersController < ApplicationController
   def show
     @user = current_user.id
     @member = Member.find(params[:id])
+    @comment = Comment.all
   end
 end

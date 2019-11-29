@@ -1,10 +1,15 @@
-<div class="member-selects">
-  <div class="select">
-      <% @members.each do |member| %>
-        <tr>
-          <%= member.name %>
-          <td><%= link_to "推しメンに登録する", add_favorite_path(id: member.id), method: :post %></td>
-        </tr>
-      <% end %>
+<div class="members">
+  <div class="member-index">
+    メンバー 一覧
+  </div>
+  <div class="member-selects">
+    <div class="select">
+        <% @members.each do |member| %>
+          <tr>
+            <h1><%= member.name %>
+            <td><%= link_to "推しメンに登録する", add_favorite_path(id: member.id), method: :post %></td>
+          </tr>
+        <% end %>
+    </div>
   </div>
 </div>
