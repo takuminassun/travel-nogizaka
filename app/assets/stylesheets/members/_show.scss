@@ -1,0 +1,24 @@
+.member-show{
+  height: 100vh;
+  width: 100%;
+  background: -moz-linear-gradient(top left, #993399, #fff); 
+  background: -webkit-linear-gradient(top left,  #993399, #fff);
+  background: linear-gradient(to bottom right, #993399, #fff);
+  .member-name{
+    font-size: 40px;
+    width: 50%;
+    margin: 0 auto;
+    padding: 50px 0;
+  }
+  .show-place{
+    font-size: 30px;
+    width: 30%;
+    margin: 10px 200px;
+    
+    h1{
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 20px;
+    }
+  }
+}

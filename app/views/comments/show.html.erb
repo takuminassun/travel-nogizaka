@@ -1,9 +1,10 @@
-<div class="contents">
-  <div class="content">
+<div class="comments-contents">
     <div class="content__info">
       <div class="content__left-name">
         <% @comment.member.each do |m| %>
-          <%= m.name %>
+          <div class="name">
+            <%= "#{m.name} : " %>
+          </div>
         <% end %>
       </div>
       <div class="content__right-place">
@@ -24,11 +25,9 @@
     <% else %>
       <%= button_to 'いいね', comment_likes_path(@comment) %>
     <% end %>
-    <h2>いいねしたユーザー</h2>
-    <% @comment.liked_users.each do |user| %>
-      <li><%= user.name %></li>
-    <% end %>
-  </div>
+    <div class="top-page">
+      <%= link_to "Top pageへ", root_path %>
+    </div>
 </div>
 
 

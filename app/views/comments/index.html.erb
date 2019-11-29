@@ -1,13 +1,13 @@
-<div class="contents">
+<div class="index__comments">
   <% @comments.each do |comment| %>
-    <div class="content">
-      <div class="content__left">
-        <div class="content__left--place">
+    <div class="index__comment">
+      <div class="index__comment__left">
+        <div class="index__comment__left__place">
           <%= comment.place %>
         </div>
       </div>
-      <div class="content__right">
-        <div class="content__right-name">
+      <div class="index__comment__right">
+        <div class="index__comment__right__name">
           <% comment.member.each do |member| %>
             <%= member.name %>
           <% end %>

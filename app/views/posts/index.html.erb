@@ -2,46 +2,42 @@
   <div class="contents">
     <div class="header">
       <div class="title">
-          Travel Nogizaka
+        Travel Nogizaka
       </div>
-      <div class="sign-up">
-        <% if user_signed_in? %>
-        <div class="user-nav grid-6">
-          <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+      <div class="link">
+        <div class="mypage">
+          <%= link_to "My page", user_path(@users) %>
         </div>
-        <% else %>
-        <div class="grid-6">
-          <%= link_to "ログイン", new_user_session_path %>
-          <%= link_to "新規登録", new_user_registration_path %>
+        <div class="sign-up">
+          <% if user_signed_in? %>
+          <div class="user-nav grid-6">
+            <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+          </div>
+          <% else %>
+          <div class="grid-6">
+            <%= link_to "ログイン", new_user_session_path %>
+            <%= link_to "新規登録", new_user_registration_path %>
+          </div>
+          <% end %>
         </div>
-        <% end %>
       </div>
     </div>
     <div class="content">
-      <div class="content__left">
-        <%= link_to 'search', comments_path %>
-      </div>
-      <div class="content__right"></div>
-        <%= link_to 'post', new_comment_path  %>
-    </div>
-    <div class="sliders">
-      <div class="slider">
-        <div>
-          <img alt="image01" src="https://www.jalan.net/news/img/2019/06/1907_kanto_1_026-670x443.jpg"/>
-        </div>
-        <div>
-          <img alt="image02" src="https://www.lanilanihawaii.com/wp/wp-content/uploads/2017/08/pixta_30975587_M-800x450.jpg"/>
-        </div>
-        <div>
-          <img alt="image03" src="https://fs.tour.ne.jp/index.php/file_manage/view/?contents_code=curation&file_name=3/7476/6ff824fe6d2cd56ca4a6bf6dd513e2a9.jpg&w=800"/>
-        </div>
-        <div>
-          <img alt="image04" src="http://cdn-ak.f.st-hatena.com/images/fotolife/m/matsukazuto/20121013/20121013234341.jpg"/>
+      <div class="sliders">
+        <div class="slider">
+          <div>
+            <img alt="image01" src="https://www.jalan.net/news/img/2019/06/1907_kanto_1_026-670x443.jpg"/>
+          </div>
+          <div>
+            <img alt="image02" src="https://www.lanilanihawaii.com/wp/wp-content/uploads/2017/08/pixta_30975587_M-800x450.jpg"/>
+          </div>
+          <div>
+            <img alt="image03" src="https://fs.tour.ne.jp/index.php/file_manage/view/?contents_code=curation&file_name=3/7476/6ff824fe6d2cd56ca4a6bf6dd513e2a9.jpg&w=800"/>
+          </div>
+          <div>
+            <img alt="image04" src="http://cdn-ak.f.st-hatena.com/images/fotolife/m/matsukazuto/20121013/20121013234341.jpg"/>
+          </div>
         </div>
       </div>
     </div>
-    <div class="like_member">
-      <%= link_to "推しメン設定", users_path(@user) %>
-    </div>
-  </div>
 </div>
