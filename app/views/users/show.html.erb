@@ -21,12 +21,18 @@
         <%= link_to "推しメンを選ぶ（追加する）", favorites_path %>
     </div>
     </div>
-    <ul class="select">
+    <div class="user-select">
     <% @user.favorites.each do |favorites| %>
-      <%= link_to "#{favorites.member.name} → ", member_path(favorites.member.id) %>
-      <td><%= link_to "推しメンから外す" , favorite_path(favorites.id), method: :delete %></td>
+      <div class="link">
+        <div class="link-name">
+          <td><%= link_to "#{favorites.member.name} ← ", member_path(favorites.member.id) %></td>
+        </div>
+        <div class="link-delete">
+          <td><%= link_to "外す" , favorite_path(favorites.id), method: :delete %></td>
+        </div>
+      </div>
     <% end %>
-    </ul>
+    </div>
     <div class="footer">
       
     </div>

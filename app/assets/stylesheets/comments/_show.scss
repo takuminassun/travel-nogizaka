@@ -20,6 +20,18 @@
     .content__right-place{
       padding-left: 200px;
     }
+    a{
+      height: 40px;
+      font-size: 20px;
+      margin-left: 50px;
+      margin-top: 20px;
+      line-height: 30px;
+      text-decoration: none;
+      color: #fff;
+      &:hover{
+        color: skyblue;
+      }
+    }
   }
   .image{
     height: 300px;
@@ -42,9 +54,10 @@
   .button_to{
     padding-left: 1000px;
     padding-top: 30px;
-    &:hover{
-      box-shadow: #99CCFF;
-      border-radius: 30px;
+    input{
+      &:hover{
+        color: skyblue;
+      }
     }
   }
   .top-page{
@@ -62,7 +75,5 @@
     a{
       text-decoration: none;
     }
-    
-    
   }
 }

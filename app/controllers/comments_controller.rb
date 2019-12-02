@@ -13,7 +13,6 @@ class CommentsController < ApplicationController
   end
 
   def create
-    # binding.pry
     @comment = Comment.new(comment_params)
     @comment.user_id = current_user.id
     
@@ -29,12 +28,18 @@ class CommentsController < ApplicationController
     @like = Like.new
   end
 
-  def update
+  def destroy
+    comment = Comment.find(params[:id])
+    comment.destroy
   end
 
-  def destory
+  def edit
+    @comment = Comment.find(params[:id])
+  end
+
+  def update
     comment = Comment.find(params[:id])
-    comment.destory
+    comment.update(comment_params)
   end
 
   private
