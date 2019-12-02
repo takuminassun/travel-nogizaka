@@ -17,6 +17,6 @@ class User < ApplicationRecord
   end
 
   def already_favorited?(member)
-    self.likes.exisits?(member_id: member.id)
+    self.favorites.exists?(member_id: member.id)
   end
 end

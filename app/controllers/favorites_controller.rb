@@ -1,6 +1,7 @@
 class FavoritesController < ApplicationController
 
   def index
+    @favorites = Favorite.all
     @members = Member.all
   end
 

@@ -10,6 +10,10 @@
       <div class="content__right-place">
         <%= @comment.place %>
       </div>
+      <% if user_signed_in? && current_user.id == @comment.user.id %>
+      <%= link_to '編集', "/comments/#{@comment.id}/edit", method: :get %>
+      <%= link_to '削除', "/comments/#{@comment.id}", method: :delete %>
+      <% end %>
     </div>
     <div class="image">
       <%= image_tag@comment.image %>
