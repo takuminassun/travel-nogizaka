@@ -1,0 +1,8 @@
+.member-show
+  .member-name
+    = @member.name
+  .show-place
+    - @member.member_comments.each do |m|
+      %h1
+        = m.comment.place
+        = link_to "詳細", comment_path(m.comment)

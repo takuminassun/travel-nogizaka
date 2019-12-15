@@ -1,0 +1,23 @@
+.wrapper
+  .contents
+    .header-box
+      .header-name
+        = @user.name
+      .header-right
+        .header-post
+          = link_to '投稿する', new_comment_path
+        .header-search
+          = link_to '投稿から探す', comments_path
+    .member
+      .member__index
+        推しメン一覧
+      .member__select
+        = link_to "推しメンを選ぶ（追加する）", favorites_path
+    .user-select
+      - @user.favorites.each do |favorites|
+        .link
+          .link-name
+            %td= link_to "#{favorites.member.name} ← ", member_path(favorites.member.id)
+          .link-delete
+            %td= link_to "外す" , favorite_path(favorites.id), method: :delete
+    .footer

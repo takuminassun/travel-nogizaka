@@ -1,0 +1,24 @@
+.comments-contents
+  .content__info
+    .content__left-name
+      - @comment.member.each do |m|
+        .name
+          = "#{m.name} : "
+    .content__right-place
+      = @comment.place
+    - if user_signed_in? && current_user.id == @comment.user.id
+      = link_to '編集', "/comments/#{@comment.id}/edit", method: :get
+      = link_to '削除', "/comments/#{@comment.id}", method: :delete
+  .image
+    = image_tag@comment.image
+  .comments
+    .comment
+      = @comment.text
+  %h3
+    いいね件数: #{@comment.likes.count}
+  - if current_user.already_liked?(@comment)
+    = button_to 'いいねを取り消す', comment_like_path(@comment), method: :delete
+  - else
+    = button_to 'いいね', comment_likes_path(@comment)
+  .top-page
+    = link_to "Top pageへ", root_path

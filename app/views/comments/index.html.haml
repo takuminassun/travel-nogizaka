@@ -1,0 +1,11 @@
+.index__comments
+  - @comments.each do |comment|
+    .index__comment
+      .index__comment__left
+        .index__comment__left__place
+          = comment.place
+      .index__comment__right
+        .index__comment__right__name
+          - comment.member.each do |member|
+            = member.name
+      = link_to '詳細', "comments/#{comment.id}", method: :get
