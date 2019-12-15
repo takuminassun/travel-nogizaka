@@ -7,40 +7,15 @@
         〜 乃木坂46 〜
     .top__contents
       .top__contents__serach
-        探す
+        =link_to "探す", search_index_path
       .top__contents__post
-        投稿する
+        =link_to "投稿する", new_comment_path
     .footer
-      サインイン
-
-
-
-
-
--# .wrapper
--#   .contents
--#     .header
--#       .title
--#         Travel Nogizaka
--#       .link
--#         .mypage
--#           = link_to "My page", user_path(@users)
-        .sign-up
-          - if user_signed_in?
-            .user-nav.grid-6
-              = link_to "ログアウト", destroy_user_session_path, method: :delete
-          - else
-            .grid-6
-              = link_to "ログイン", new_user_session_path
-              = link_to "新規登録", new_user_registration_path
-    -# .content
-    -#   .sliders
-    -#     .slider
-    -#       %div
-    -#         %img{:alt => "image01", :src => "https://www.jalan.net/news/img/2019/06/1907_kanto_1_026-670x443.jpg"}/
-    -#       %div
-    -#         %img{:alt => "image02", :src => "https://www.lanilanihawaii.com/wp/wp-content/uploads/2017/08/pixta_30975587_M-800x450.jpg"}/
-    -#       %div
-    -#         %img{:alt => "image03", :src => "https://fs.tour.ne.jp/index.php/file_manage/view/?contents_code=curation&file_name=3/7476/6ff824fe6d2cd56ca4a6bf6dd513e2a9.jpg&w=800"}/
-    -#       %div
-    -#         %img{:alt => "image04", :src => "http://cdn-ak.f.st-hatena.com/images/fotolife/m/matsukazuto/20121013/20121013234341.jpg"}/
+      - if user_signed_in?
+        .user-nav.grid-6
+          =link_to "マイページ", "/users/#{current_user.id}"
+          =link_to "ログアウト", destroy_user_session_path, method: :delete
+      - else
+        .grid-6
+          =link_to "ログイン", new_user_session_path
+          =link_to "新規登録", new_user_registration_path

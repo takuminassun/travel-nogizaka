@@ -10,7 +10,7 @@
       = link_to '編集', "/comments/#{@comment.id}/edit", method: :get
       = link_to '削除', "/comments/#{@comment.id}", method: :delete
   .image
-    = image_tag@comment.image
+    = image_tag@comment.image.url
   .comments
     .comment
       = @comment.text

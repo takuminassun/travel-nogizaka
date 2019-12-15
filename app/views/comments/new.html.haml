@@ -8,6 +8,6 @@
           %h1
             = f.text_area :text, class: 'form__review', placeholder: '感想(コメント)を入力してください'
             %h1
-              = f.text_field :image, class: 'form__image', placeholder: '画像のURLを貼り付けてください'
+              = f.file_field :image, class: 'form__image'
               %h1
                 = f.submit :class=>"btn"

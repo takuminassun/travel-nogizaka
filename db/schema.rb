@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 2019_11_26_103042) do
     t.string "place", null: false
     t.integer "user_id"
     t.text "text", null: false
-    t.string "image"
+    t.string "image", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -50,6 +50,7 @@ ActiveRecord::Schema.define(version: 2019_11_26_103042) do
 
   create_table "members", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
+    t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
