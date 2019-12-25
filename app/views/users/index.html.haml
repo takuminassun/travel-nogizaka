@@ -1,0 +1,7 @@
+.header
+  推しメン設定
+  - @users.each do |user|
+    .select_member
+      = user.name
+      = link_to "推しメンを見る", user_path(user)
+      = link_to "推しメンを決める", favorites_path

@@ -1,0 +1,6 @@
+.member-selects
+  .select
+    - @members.each do |member|
+      %tr
+        = member.name
+        %td= link_to "旅先を見る", "#"

@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
-  resources :users
-  resources :members 
+  
+  resources :users, only: :show
+  resources :members ,only: [:index, :show]
   resources :favorites, only: [:index, :destroy] do 
     member do
       post "add", to: "favorites#create"
@@ -14,6 +15,7 @@ Rails.application.routes.draw do
   resources :comments do
     resources :likes, only: [:create, :destroy]
   end
+  resources :search, only: [:index]
   
 
   root to: 'posts#index'

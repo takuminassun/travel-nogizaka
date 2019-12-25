@@ -8,4 +8,5 @@ class Comment < ApplicationRecord
   has_many :member, through: :member_comments
 
   accepts_nested_attributes_for :member_comments
+  mount_uploader :image, ImageUploader
 end

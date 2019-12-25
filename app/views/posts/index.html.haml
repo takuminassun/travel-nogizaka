@@ -1,0 +1,21 @@
+.wrapper__bg
+  .wrapper
+    .header
+      .header__main
+        Prigrimage
+      .header__sub
+        〜 乃木坂46 〜
+    .top__contents
+      .top__contents__serach
+        =link_to "探す", search_index_path
+      .top__contents__post
+        =link_to "投稿する", new_comment_path
+    .footer
+      - if user_signed_in?
+        .user-nav.grid-6
+          =link_to "マイページ", "/users/#{current_user.id}"
+          =link_to "ログアウト", destroy_user_session_path, method: :delete
+      - else
+        .grid-6
+          =link_to "ログイン", new_user_session_path
+          =link_to "新規登録", new_user_registration_path
