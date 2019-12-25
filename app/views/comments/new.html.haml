@@ -1,13 +1,10 @@
 .contents
   .form
     = form_for @comment do |f|
-      %h2
-        = f.collection_check_boxes :member_ids, Member.all, :id, :name
-        %h1
-          = f.text_field :place, class: 'form__place', placeholder: '観光地を入力してください'
-          %h1
-            = f.text_area :text, class: 'form__review', placeholder: '感想(コメント)を入力してください'
-            %h1
-              = f.file_field :image, class: 'form__image'
-              %h1
-                = f.submit :class=>"btn"
+      = f.collection_select :member_ids, Member.all, :id, :name, prompt: "---"
+      = f.collection_select :member_ids, Member.all, :id, :name, prompt: "---"
+      = f.collection_select :member_ids, Member.all, :id, :name, prompt: "---"
+      = f.text_field :place, class: 'form__place', placeholder: '観光地を入力してください'
+      = f.text_area :text, class: 'form__review', placeholder: '感想(コメント)を入力してください'
+      = f.file_field :image, class: 'form__image'
+      = f.submit :class=>"btn"
