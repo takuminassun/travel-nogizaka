@@ -3,12 +3,12 @@
     メンバー 一覧
   .member-selects
     .select
-      - @members.each do |member|
+      - @members.each_with_index do |member, i|
         - if current_user.already_favorited?(member)
           %h1
             = member.name
             .registration
-              = "推しメン登録済"
+              推しメン
         - else
           %h1
             = member.name

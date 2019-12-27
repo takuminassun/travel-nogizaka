@@ -7,6 +7,8 @@ class Comment < ApplicationRecord
   has_many :member_comments, dependent: :destroy
   has_many :member, through: :member_comments
 
-  accepts_nested_attributes_for :member_comments
+  accepts_nested_attributes_for :member_comments, allow_destroy: true
   mount_uploader :image, ImageUploader
+
+  validates :member_ids, presence: true
 end

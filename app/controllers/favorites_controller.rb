@@ -11,14 +11,14 @@ class FavoritesController < ApplicationController
     @member_id = Member.find(params[:id]).id
     @favorite = Favorite.new(member_id: @member_id, user_id: @user_id)
     if @favorite.save
-      redirect_to user_path
+      redirect_to user_path(current_user.id)
     end
   end
 
   def destroy
     @favorite = Favorite.find(params[:id])
     if @favorite.destroy
-      redirect_to user_path
+      redirect_to user_path(current_user.id)
     end
   end
 
