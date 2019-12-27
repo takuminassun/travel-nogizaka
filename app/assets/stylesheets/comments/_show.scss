@@ -1,79 +1,95 @@
-.comments-contents{
-  width: 1440px;
-  height: 100%;
-  position: fixed;
-  background: -moz-linear-gradient(top right, #993399, #fff); 
-  background: -webkit-linear-gradient(top right,  #993399, #fff);
-  background: linear-gradient(to bottom left, #993399, #fff);
-  .content__info{
-    width: 80%;
-    height: 100px;
+.wrappers{
+  .headers{
+    width: 100%;
+    height: 200px;
     display: flex;
-    padding: 30px 100px 0;
-    font-size: 40px;
-    .content__left-name{
-      display: flex;
-      .name{
-        padding: 0 20px;
+    justify-content: space-between;
+    &__left{
+      width: 30%;
+      background: radial-gradient(#fff, #BAD3FF);
+      font-size: 30px;
+      line-height: 180px;
+      text-align: center;
+    }
+    &__right{
+      width: 70%;
+      background: radial-gradient(#fff,#FFAAFF	);
+      &__text{
+        display: flex;
+        justify-content: center;
+        &__mem{
+          font-size: 30px;
+          line-height: 90px;
+          margin-right: 70px;
+        }
+        &__change{
+          a{
+            font-size: 20px;
+            text-decoration: none;
+            line-height: 100px;
+          }
+        }
       }
-    }
-    .content__right-place{
-      padding-left: 200px;
-    }
-    a{
-      height: 40px;
-      font-size: 20px;
-      margin-left: 50px;
-      margin-top: 20px;
-      line-height: 30px;
-      text-decoration: none;
-      color: #fff;
-      &:hover{
-        color: skyblue;
-      }
-    }
-  }
-  .image{
-    height: 300px;
-    padding: 0 400px;
-    img{
-      height: 300px;
-    }
-  }
-  .comments{
-    font-size: 30px;
-    padding: 30px 300px;
-    .comment{
-      border-bottom: solid 1px;
-    }
-  }
-  h3{
-    font-size: 20px;
-    padding-left: 1000px;
-  }
-  .button_to{
-    padding-left: 1000px;
-    padding-top: 30px;
-    input{
-      &:hover{
-        color: skyblue;
+      &__members{
+        margin: 0 20px;
+        a{
+          line-height: 150px;
+          font-size: 25px;
+          margin: 0 10px 20px;
+          text-decoration: none;
+          color: #000;
+        }
+        .mem{
+          border-bottom: 1px solid;
+        }
+        .delete{
+          font-size: 15px;
+          margin-right: 100px;
+          color: red;
+        }
       }
     }
   }
-  .top-page{
-    display: inline-block;
-    box-sizing: border-box;
-    font-size: 30px;
-    margin: 0 600px;
-    border-radius: 35px;
-    width: 200px;
-    text-align: center;
-    background-color: #FFFFCC;
-    &:hover{
-      background-color: skyblue;
+  .contents{
+    width: 50%;
+    margin: 0 auto;
+    &__text{
+      font-size: 30px;
+      line-height: 100px;
     }
-    a{
-      text-decoration: none;
+    &__content{
+      box-shadow: 5px 5px 10px;
+      border: 1px solid;
+      margin-bottom: 40px;
+      &__head{
+        display: flex;
+        justify-content: left;
+        position: relative;
+        &__member{
+          font-size: 20px;
+          margin: 10px 40px 20px;
+        }
+        &__place{
+          width: 60%;
+          font-size: 18px;
+          line-height: 50px;
+          position: absolute;
+          display: flex;
+          justify-content: space-between;
+          right: 10px;
+        }
+        
+      }
+      &__image{
+        img{
+          width: 95%;
+          margin-left: 12px;
+        }
+      }
+      &__comment{
+        font-size: 18px;
+        margin: 5px 40px 0;
+      }
     }
   }
 }
