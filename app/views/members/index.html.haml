@@ -1,6 +1,10 @@
-.member-selects
+.member__selects
+  .members__index
+    メンバー一覧
   .select
     - @members.each do |member|
-      %tr
-        = member.name
-        %td= link_to "旅先を見る", "#"
+      .select__box
+        .select__box__member
+          = link_to "#{member.name}", member_path(member.id)
+        .select__box__image
+          image
