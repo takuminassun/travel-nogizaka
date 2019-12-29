@@ -1,24 +1,58 @@
-.member-show{
-  height: 100vh;
-  width: 100%;
+.member__show{
   background: -moz-linear-gradient(top left, #993399, #fff); 
   background: -webkit-linear-gradient(top left,  #993399, #fff);
   background: linear-gradient(to bottom right, #993399, #fff);
-  .member-name{
-    font-size: 40px;
-    width: 50%;
-    margin: 0 auto;
-    padding: 50px 0;
-  }
-  .show-place{
+  width: 100vw;
+  height: 100vh;
+  .member__box{
     font-size: 30px;
-    width: 30%;
-    margin: 10px 200px;
-    
-    h1{
-      display: flex;
-      justify-content: space-between;
-      padding-bottom: 20px;
+    width: 400px;
+    height: 100px;
+    margin: 0 auto;
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    &__name{
+      line-height: 100px;
+    }
+    &__image{
+      height: 100px;
+      width: 100px;
+      border: 1px solid;
+    }
+  }
+  .select{
+    margin: 0 auto;
+    width: 1000px;
+    height: 80%;
+    background-color: #FFFFDD;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: scroll;
+    &__box {
+      width: 300px;
+      height: 200px;
+      margin: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 8px gray;
+      &__place{
+        text-align: center;
+        a{
+          font-size: 20px;
+          text-decoration: none;
+          color: blueviolet;
+        }
+      }
+      &__image{
+        margin: 0 auto;
+        width: 200px;
+        height: 150px;
+        img{
+          margin: 0 auto;
+          height: 100%;
+          box-shadow: 2px 2px 4px;
+        }
+      }
     }
   }
 }
