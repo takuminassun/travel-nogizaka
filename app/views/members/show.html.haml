@@ -1,8 +1,13 @@
-.member-show
-  .member-name
-    = @member.name
-  .show-place
+.member__show
+  .member__box
+    .member__box__name
+      = @member.name
+    .member__box__image 
+      image
+  .select
     - @member.member_comments.each do |m|
-      %h1
-        = m.comment.place
-        = link_to "詳細", comment_path(m.comment)
+      .select__box
+        .select__box__place
+          = link_to "#{m.comment.place}", comment_path(m.comment)
+        .select__box__image
+          = image_tag m.comment.image.url

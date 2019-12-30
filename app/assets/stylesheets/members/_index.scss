@@ -1,0 +1,42 @@
+.member__selects{
+  background-color: orange;
+  width: 100vw;
+  height: 100vh;
+  .members__index{
+    font-size: 30px;
+    width: 300px;
+    height: 100px;
+    margin: 0 auto;
+    padding-top: 30px;
+  }
+  .select{
+    margin: 0 auto;
+    width: 1000px;
+    height: 80%;
+    background-color: blue;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: scroll;
+    &__box {
+      width: 200px;
+      height: 200px;
+      margin: 20px;
+      background-color: #fff;
+      
+      &__member{
+        text-align: center;
+        a{
+          font-size: 20px;
+          text-decoration: none;
+          color: blueviolet;
+        }
+      }
+      &__image{
+        margin: 0 auto;
+        width: 150px;
+        height: 150px;
+        border: 1px solid;
+      }
+    }
+  }
+}
