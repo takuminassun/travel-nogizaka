@@ -4,9 +4,9 @@
   .all__header__right
     %ul
       %li 
-        = link_to "TOP", "#"
+        = link_to "TOP", root_path
       %li 
-        = link_to " SEARCH", "#"
+        = link_to " SEARCH", search_index_path
       %li
         - if user_signed_in?
           =link_to "マイページ", "/users/#{current_user.id}"
