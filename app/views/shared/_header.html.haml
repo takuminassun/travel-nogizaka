@@ -1,0 +1,15 @@
+.all__header
+  .all__header__left
+    Prigrimage
+  .all__header__right
+    %ul
+      %li 
+        = link_to "TOP", "#"
+      %li 
+        = link_to " SEARCH", "#"
+      %li
+        - if user_signed_in?
+          =link_to "マイページ", "/users/#{current_user.id}"
+        - else
+          =link_to "ログイン", new_user_session_path
+          =link_to "新規登録", new_user_registration_path
