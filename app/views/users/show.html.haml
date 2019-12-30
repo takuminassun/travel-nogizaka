@@ -31,3 +31,4 @@
   .footer
     = link_to "投稿する", new_comment_path 
     = link_to "旅を見る", search_index_path
+    = link_to "ログアウト", destroy_user_session_path, method: :delete
