@@ -20,7 +20,10 @@
         line-height: 50px;
         a{
           text-decoration: none;
-          color: black;
+          color: gray;
+          &:hover{
+            color: black;
+          }
         }
       }
     }
