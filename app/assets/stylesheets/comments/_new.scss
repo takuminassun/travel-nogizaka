@@ -1,95 +1,76 @@
 .contents{
-  height: 100vh;
   width: 100vw;
+  height: 100vh;
+  background-color: #EEEEEE;
+  padding-top: 80px;
+  &__top{
+    position: absolute;
+    font-size: 40px;
+    top: 10px;
+    left: 650px;
+  }
   .form{
-    height: 100%;
-    width: 76%;
-    background-image: url('https://image.space.rakuten.co.jp/d/strg/ctrl/9/7e638a58cc50a550601eb934589ff532b9b9f6c1.10.2.9.2.jpeg');
-    background-repeat: no-repeat;
-    padding: 0 50px;
+    width: 60%;
+    height: 80%;
     margin: 0 auto;
-    h3{
-      font-size: 50px;
-      color: #FFFF99;
-      text-align: center;
+    padding-top: 20px;
+    background-color: #fff;
+    position: relative;
+    box-shadow: 4px 4px;
+    .only__member{
+      width: 80%;
+      margin: 20px auto;
+      height: 150px;
+      border: 1px solid;
     }
-    h2{
-      padding-top: 40px;
-    }
-    h1{
+    &__text{
+      width: 80%;
       margin: 0 auto;
-      padding: 50px 300px 30px ;
-    }
-    #new-comment{
-      height: 400px;
-      width: 100%;
-    }
-    .member{
-      width: 70%;
-      height: 300px;
-      padding: 0px;
+      display: flex;
+      justify-content: space-between;
+      &__place{
+        width: 300px;
+        input{
+          border-radius: 5px;
+          width: 80%;
+        }
+      }
+      &__review{
+        width: 400px;
+        height: 100px;
+        textarea{
+          height: 100%;
+          width: 100%;
+          border-radius: 5px;
+        }
+      }
+
     }
     
-    label{
-      color: #fff;
-      height: 80px;
-      width: 80%;
-      margin: 30px;
-      font-size: 25px;
+    &__image{
+      margin: 20px auto;
+      width: 90%;
+      height: 200px;
     }
-    .form__place{
-      width: 500px;
-      height: 50px;
-      margin: 0 auto;
-      background-color: rgba(255,255,255,0.5);
-      &::-webkit-input-placeholder {
-        color: #333333;
-      }
-      
-      &::-moz-placeholder {
-        color: #333333;
-      }
-      
-      &::-ms-input-placeholder {
-        color: #333333;
+    &__submit{
+      position: absolute;
+      bottom: 40px;
+      margin: 20px 360px;
+      border: 1px solid;
+      border-radius: 5px;
+      input{
+        &:hover{
+          background-color: blueviolet;
+          color: #fff;
+        }
       }
     }
-    .form__review{
-      width: 500px;
-      height: 100px;
-      background-color: rgba(255,255,255,0.5);
-      &::-webkit-input-placeholder {
-        color: #333333;
-      }
-      
-      &::-moz-placeholder {
-        color: #333333;
-      }
-      
-      &::-ms-input-placeholder {
-        color: #333333;
-      }
-    }
-    .form__image{
-      width: 500px;
-      height: 50px;
-      background-color: rgba(255,255,255,0.5);
-      &::-webkit-input-placeholder {
-        color: #333333;
-      }
-      
-      &::-moz-placeholder {
-        color: #333333;
-      }
-      
-      &::-ms-input-placeholder {
-        color: #333333;
-      }
-    }
-    .btn{
-      width: 150px;
-      background-color: yellow;
-      border-radius: 35px;
+    .footer{
+        width: 20px;
+        margin: 0 auto;
+        a{
+          text-decoration: none;
+        }
     }
   }
 }

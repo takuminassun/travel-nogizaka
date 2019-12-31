@@ -15,15 +15,20 @@
       margin: 0 auto;
       padding-top: 290px;
       a{
+        opacity: 0.7;
         display: block;
         height: 100px;
         width: 300px;
-        background-color: skyblue;
+        background-color: blueviolet;
         margin: 30px 0;
         font-size: 30px;
         line-height: 100px;
         text-decoration: none;
-        color: gray;
+        color: #FFFFDD;
+        border-radius: 10px;
+        &:hover{
+          color: #000;
+        }
       }
     }
   }

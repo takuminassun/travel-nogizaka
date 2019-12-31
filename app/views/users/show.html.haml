@@ -2,7 +2,12 @@
 .wrappers
   .headers
     .headers__left
-      = @user.name
+      .headers__left-name
+        = @user.name
+      .user__info
+        = link_to "投稿する", new_comment_path 
+        = link_to "旅を見る", search_index_path
+        = link_to "ログアウト", destroy_user_session_path, method: :delete, id: "delete"
     .headers__right
       .headers__right__text
         .headers__right__text__mem
@@ -13,23 +18,21 @@
         - @user.favorites.each do |favorites|
           = link_to "#{favorites.member.name}", member_path(favorites.member.id), class: "mem"
           = link_to "外す" , favorite_path(favorites.id), method: :delete, class: "delete"
-  .contents
-    .contents__text
+  .users__contents
+    .users__contents__text
       投稿
       - @user.comments.each do |c|
-        .contents__content
-          .contents__content__head
-            .contents__content__head__member
+        .users__contents__content
+          .users__contents__content__head
+            .users__contents__content__head__member
               - c.member.each do |member|
                 =member.name
-            .contents__content__head__place
+            .users__contents__content__head__place
               =c.place
               = link_to "詳細", comment_path(c.id)
-          .contents__content__image
+          .users__contents__content__image
             = image_tag c.image.url
-          .contents__content__comment
+          .users__contents__content__comment
             =c.text
   .footer
-    = link_to "投稿する", new_comment_path 
-    = link_to "旅を見る", search_index_path
-    = link_to "ログアウト", destroy_user_session_path, method: :delete
+    

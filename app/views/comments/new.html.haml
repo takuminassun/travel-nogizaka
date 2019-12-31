@@ -1,8 +1,18 @@
 .contents
+  .contents__top
+    新規投稿
   .form
     = form_for @comment do |f|
-      = f.collection_check_boxes :member_ids, Member.all, :id, :name, prompt: "---"
-      = f.text_field :place, class: 'form__place', placeholder: '観光地を入力してください'
-      = f.text_area :text, class: 'form__review', placeholder: '感想(コメント)を入力してください'
-      = f.file_field :image, class: 'form__image'
-      = f.submit :class=>"btn"
+      .only__member
+        = f.collection_check_boxes :member_ids, Member.all, :id, :name, prompt: "---"
+      .form__text
+        .form__text__place
+          = f.text_field :place, class: 'form__place', placeholder: '観光地を入力してください'
+        .form__text__review
+          = f.text_area :text, class: 'form__review', placeholder: '感想(コメント)を入力してください'
+      .form__image
+        = f.file_field :image, type: 'file', value:'', id: "img-file"
+      .form__submit
+        = f.submit :class=>"btn"
+      .footer
+        =link_to "❌", root_path
