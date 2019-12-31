@@ -1,4 +1,7 @@
 .member__show{
+  position: absolute;
+  top: 50px;
+  position: fixed;
   background: -moz-linear-gradient(top left, #993399, #fff); 
   background: -webkit-linear-gradient(top left,  #993399, #fff);
   background: linear-gradient(to bottom right, #993399, #fff);
@@ -24,7 +27,7 @@
   .select{
     margin: 0 auto;
     width: 1000px;
-    height: 80%;
+    height: 70%;
     background-color: #FFFFDD;
     display: flex;
     flex-wrap: wrap;
