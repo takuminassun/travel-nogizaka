@@ -17,7 +17,7 @@
       .show____edit-btn
         - if user_signed_in? && current_user.id == @comment.user.id
           = link_to '編集', "/comments/#{@comment.id}/edit", method: :get
-          = link_to '削除', "/comments/#{@comment.id}", method: :delete
+          = link_to '削除', "/comments/#{@comment.id}", method: :delete, data: {confirm: '削除しますか'}
       %h3
         いいね件数: #{@comment.likes.count}
         .button

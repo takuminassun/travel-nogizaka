@@ -11,4 +11,7 @@ class Comment < ApplicationRecord
   mount_uploader :image, ImageUploader
 
   validates :member_ids, presence: true
+  validates :place, presence: true
+  validates :image, presence: true
+  validates :text, presence: true
 end

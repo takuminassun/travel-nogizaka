@@ -1,3 +1,6 @@
+p{
+  color: red;
+}
 .contents{
   width: 100vw;
   height: 100vh;
@@ -22,6 +25,9 @@
       margin: 20px auto;
       height: 150px;
       border: 1px solid;
+      label{
+        display: inline-block;
+      }
     }
     .box-2{
       display: flex;
