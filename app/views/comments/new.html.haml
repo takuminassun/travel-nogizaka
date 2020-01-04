@@ -3,19 +3,30 @@
     新規投稿
   .form
     = form_for @comment do |f|
+      %h6 最大5人まで選べます
       .only__member
         = f.collection_check_boxes :member_ids, Member.all, :id, :name, prompt: "---"
+        -if @comment.errors[:member_ids].any?
+          .error-message
+            %p メンバーを選んでください
       .box-2
         .form__text
           .form__text__place
             = f.text_field :place, class: 'form__place', placeholder: '観光地を入力してください'
+            -if @comment.errors[:place].any?
+              .error-message
+                %p 観光地を入力してください
           .form__text__review
             = f.text_area :text, class: 'form__review', placeholder: '感想(コメント)を入力してください'
+            -if @comment.errors[:text].any?
+              .error-message
+                %p コメントを入力してください
         .form__image
           = f.file_field :image, type: 'file', id: "img-file"
           %img#img1{:style => "width:300px;height:200px;"}/
-
-
+          -if @comment.errors[:image].any?
+            .error-message
+              %p 写真をアップロードしてください
       .form__submit
         = f.submit :class=>"btn"
     .footer

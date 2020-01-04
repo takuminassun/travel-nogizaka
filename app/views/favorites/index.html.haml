@@ -1,15 +1,18 @@
 .members
   .member-index
-    メンバー 一覧
+    メンバー 一覧 （3人まで登録できます）
   .member-selects
     .select
       - @members.each_with_index do |member, i|
         - if current_user.already_favorited?(member)
-          %h1
+          .add-member
             = member.name
             .registration
-              推しメン
+            = link_to "推しメンから外す" , favorite_path(@favorites.ids), method: :delete, class: "delete"
         - else
-          %h1
+          .add-member
             = member.name
-            %td= link_to "推しメンに登録する", add_favorite_path(id: member.id), method: :post
+            -if @count.count == 3
+
+            -else
+              = link_to "推しメンに登録する", add_favorite_path(id: member.id), method: :post

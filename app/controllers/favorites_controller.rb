@@ -3,6 +3,7 @@ class FavoritesController < ApplicationController
   def index
     @favorites = Favorite.all
     @members = Member.all
+    @count = Favorite.where(user_id: current_user.id)
   end
 
 
