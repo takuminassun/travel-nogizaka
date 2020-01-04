@@ -20,7 +20,12 @@
           = link_to "外す" , favorite_path(favorites.id), method: :delete, class: "delete"
   .users__contents
     .users__contents__text
-      投稿
+      -if @user.comments.length > 0
+        投稿
+      -else
+        まだ投稿がありません
+        %br
+        = link_to "投稿する", new_comment_path 
       - @user.comments.each do |c|
         .users__contents__content
           .users__contents__content__head

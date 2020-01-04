@@ -57,9 +57,12 @@
         .button{
           height: 50px;
           font-size: 15px;
-          &:hover{
-            background-color: blueviolet;
-          }
+           input{
+            &:hover{
+              background-color: blueviolet;
+            }
+           }
+
         }
       }
     }

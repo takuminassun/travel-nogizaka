@@ -3,6 +3,7 @@
     新規投稿
   .form
     = form_for @comment do |f|
+      %h6 最大5人まで選べます
       .only__member
         = f.collection_check_boxes :member_ids, Member.all, :id, :name, prompt: "---"
         -if @comment.errors[:member_ids].any?
