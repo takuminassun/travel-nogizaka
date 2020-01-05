@@ -17,6 +17,9 @@
       text-align: center;
       &__main{
         font-size: 80px;
+        &__sub{
+          font-size: 40px;
+        }
       }
       &__sub{
         font-size: 30px;
