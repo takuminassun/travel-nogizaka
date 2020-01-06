@@ -1,5 +1,32 @@
-h2{
+.new_registration{
+  height: 450px;
+  width: 700px;
   margin: 0 auto;
-  width: 500px;
-  height: 500px;
+  background-color: #eeeeee;
+  box-shadow: 0 0 8px gray;
+  h2{
+    text-align: center;
+    margin-top: 100px;
+  }
+  form{
+    width: 50%;
+    height: 300px;
+    margin: 0 auto;
+    .field{
+      width: 200px;
+      margin: 20px auto;
+      input{
+        border-radius: 10px;
+        width: 170px;
+      }
+    }
+    .actions{
+      width: 170px;
+      margin: 20px auto;
+    }
+    .login{
+      width: 170px;
+      margin: 0 auto;
+    }
+  }
 }
