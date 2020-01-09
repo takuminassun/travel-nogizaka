@@ -1,0 +1,24 @@
+=render "shared/header"
+.index__comments
+  .index__comments__big
+    = form_with(url: search_comments_path, local: true, method: :get, class: "search-form") do |form|
+      =form.text_field :keyword, placeholder: "検索する", class: "search-input"
+      =form.submit "場所を検索", class: "search-btn"
+    -if @comments.present?
+      .index__comments__box
+        - @comments.each do |comment|
+          .index__comment
+            .index__comment__text
+              .index__comment__left
+                .index__comment__left__place
+                  = comment.place
+              .index__comment__right
+                .index__comment__right__name
+                  - comment.member.each do |member|
+                    = member.name
+              = link_to '詳細', "comments/#{comment.id}", method: :get
+            .index__comment__image
+              = image_tag comment.image.url
+    -else
+      .not-search
+        検索した結果に一致する場所はございません。キーワードを変えて検索してください。

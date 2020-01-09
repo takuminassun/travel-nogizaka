@@ -15,4 +15,9 @@ class Comment < ApplicationRecord
   validates :place, presence: true
   validates :image, presence: true
   validates :text, presence: true
+
+  def self.search(search)
+    return Comment.all unless search
+    Comment.where('place LIKE(?)', "%#{search}%")
+  end
 end

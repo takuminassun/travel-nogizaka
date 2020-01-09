@@ -5,6 +5,12 @@ class CommentsController < ApplicationController
   def index
     @comments = Comment.all
     @comment = Comment.new
+    if user_signed_in?
+      @user = current_user
+      @favorite = Favorite.where("user_id = ?", @user)
+    else 
+      
+    end
   end
 
   def new
@@ -39,6 +45,10 @@ class CommentsController < ApplicationController
   def update
     comment = Comment.find(params[:id])
     comment.update(comment_params)
+  end
+
+  def search
+    @comments = Comment.search(params[:keyword])
   end
 
   private
