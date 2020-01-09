@@ -16,8 +16,8 @@ Rails.application.routes.draw do
     resources :likes, only: [:create, :destroy]
   end
   resources :search, only: [:index]
-  
-
   root to: 'posts#index'
+
+  get 'getstarted', to: 'posts#getstarted'
   
 end
