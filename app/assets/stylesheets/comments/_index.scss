@@ -9,6 +9,22 @@
   &__big{
     width: 1080px;
     margin: 0 auto;
+    .search-form{
+      width: 500px;
+      height: 50px;
+      margin: 20px auto;
+      .search-input{
+        height: 40px;
+        width: 300px;
+        border-radius: 2px;
+      }
+      .search-btn{
+        height: 30px;
+      }
+    }
+    .not-search{
+      text-align: center;
+    }
     .index__comments__box{
       background-color: #fff;
       display: flex;
