@@ -2,7 +2,7 @@
   padding-top: 50px;
   width: 100vw;
   height: 600px;
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)) ,url(sea-image1.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)) ,image-url("sea-image1.jpg");
   background-size: cover;
   &__content{
     width: 500px;
@@ -100,7 +100,7 @@
     &__image{
       height: 100%;
       width: 60%;
-      background-image: url(post-image.jpg);
+      background-image: image-url("post-image.jpg");
       background-size: cover;
     }
   }
@@ -108,7 +108,7 @@
 .third{
   width: 100vw;
   height: 500px;
-  background: linear-gradient(100deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)) ,url(search-image.jpg);
+  background: linear-gradient(100deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)) ,image-url("search-image.jpg");
   background-size: cover;
   &__content{
     width: 300px;
@@ -149,7 +149,7 @@
 .forth{
   width: 100vw;
   height: 500px;
-  background: linear-gradient(90deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)) ,url(user-image2.jpg);
+  background: linear-gradient(90deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)) ,image-url("user-image2.jpg");
   background-position:center center;
   background-size: cover;
   &__content{
