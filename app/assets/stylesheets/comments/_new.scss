@@ -21,13 +21,14 @@ p{
     position: relative;
     box-shadow: 4px 4px;
     .only__member{
-      width: 80%;
+      width: 700px;
       margin: 20px auto;
       height: 150px;
       border: 1px solid;
       overflow: scroll;
       label{
         display: inline-block;
+        width: 160px;
       }
     }
     .box-2{
