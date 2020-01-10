@@ -16,7 +16,7 @@
                 .index__comment__right__name
                   - comment.member.each do |member|
                     = member.name
-              = link_to '詳細', "comments/#{comment.id}", method: :get
+              = link_to '詳細', "#{comment.id}", method: :get
             .index__comment__image
               = image_tag comment.image.url
     -else
