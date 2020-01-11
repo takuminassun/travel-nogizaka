@@ -19,8 +19,8 @@ class CommentsController < ApplicationController
   end
 
   def create
-    # binding.pry
     @comment = Comment.new(comment_params)
+    # binding.pry
     if @comment.save
       redirect_to user_path(current_user.id)
     else
