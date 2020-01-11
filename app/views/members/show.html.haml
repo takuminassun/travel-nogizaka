@@ -4,7 +4,10 @@
     .member__box__name
       = @member.name
     .member__box__image 
-      image
+      -if @member.image.present?
+        = image_tag @member.image.url, width: "150px", height: "180px"
+      - else
+        comming soon
   -if @member.member_comments.present?
     .select
       - @member.member_comments.each do |m|
