@@ -8,4 +8,7 @@
         .select__box__member
           = link_to "#{member.name}", member_path(member.id)
         .select__box__image
-          image
+          -if member.image.present?
+            = image_tag member.image.url, width: "150px"
+          - else
+            comming soon
