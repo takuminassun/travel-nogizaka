@@ -1,0 +1,30 @@
+#modal01.modal.js-modal
+  .modal__bg.js-modal-close
+  .modal__content
+    .modal-body
+      %h1 新規登録
+      = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+        = devise_error_messages!
+        .field
+          = f.label :name
+          %em (最大6文字)
+          %br/
+          = f.text_field :name, autofocus: true, maxlength: "6"
+        .field
+          = f.label :email
+          %br/
+          = f.email_field :email, autofocus: true, autocomplete: "email"
+        .field
+          = f.label :password
+          - if @minimum_password_length
+            %em
+              (#{@minimum_password_length} 字以上)
+          %br/
+          = f.password_field :password, autocomplete: "new-password"
+        .field
+          = f.label :もう一度入力してください
+          %br/
+          = f.password_field :password_confirmation, autocomplete: "new-password"
+        .actions
+          = f.submit "登録する", class: 'btn btn-primary'
+    %a.js-modal-close{:href => ""} 閉じる

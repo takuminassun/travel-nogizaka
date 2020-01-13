@@ -23,6 +23,7 @@
       .second__content__text-btn
         =link_to "投稿する", new_comment_path
     .second__content__image
+
 .third
   .third__content
     .third__content__text
@@ -33,20 +34,24 @@
         旅行に行く際の参考にしてみませんか？
       .third__content__text-btn
         =link_to "探す", search_index_path
-
+        
 .forth
   .forth__content
     .forth__content__text
       .forth__content__text-head
-        ユーザー特典
+        ユーザー登録
       .forth__content__text-main
-        ユーザー登録していただくと推しメンを選んだり投稿にいいねしたりできます。
+        ユーザー登録することで推しメンを選んだり投稿にいいねをつけたりすることができるようになります。
         推しメンを決めて聖地を探してみましょう。
       - if user_signed_in?
         .forth__content__text-btn
           =link_to "マイページ", "/users/#{current_user.id}"
       - else
         .forth__content__text-btn1
-          =link_to "ログイン", new_user_session_path
+          %a.js-modal-open{"data-target" => "modal02", :href => ""} ログイン
+          %br/
+        =render 'devise/sessions/new'
         .forth__content__text-btn2
-          =link_to "新規登録", new_user_registration_path
+          %a.js-modal-open{"data-target" => "modal01", :href => ""} 新規登録
+          %br/
+          =render 'devise/registrations/new'

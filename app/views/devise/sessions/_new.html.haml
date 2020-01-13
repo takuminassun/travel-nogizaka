@@ -1,0 +1,25 @@
+#modal02.modal.js-modal
+  .modal__bg.js-modal-close
+  .modal__login
+    .modal-body
+      %div
+        %h1 ログイン
+        %br/
+        = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+          .wrap
+            .field
+              %label{:for => "email"} Email
+              = f.email_field :email
+            .field
+              %label{:for => "password"} Password
+              = f.password_field :password, autocomplete: "off"
+            %div
+              - if devise_mapping.rememberable?
+                .remember
+                  = f.check_box :remember_me
+                  = f.label :remember_me
+            %div
+              = f.submit "Log in", class: 'btn btn-primary'
+            %div
+              - render "devise/shared/links"
+    %a.js-modal-close{:href => ""} 閉じる
