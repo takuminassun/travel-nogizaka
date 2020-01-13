@@ -47,7 +47,9 @@
           =link_to "マイページ", "/users/#{current_user.id}"
       - else
         .forth__content__text-btn1
-          =link_to "ログイン", new_user_session_path
+          %a.js-modal-open{"data-target" => "modal02", :href => ""} ログイン
+          %br/
+        =render 'devise/sessions/new'
         .forth__content__text-btn2
           %a.js-modal-open{"data-target" => "modal01", :href => ""} 新規登録
           %br/

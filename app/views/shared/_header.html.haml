@@ -11,5 +11,9 @@
         - if user_signed_in?
           =link_to "マイページ", "/users/#{current_user.id}"
         - else
-          =link_to "ログイン", new_user_session_path
-          =link_to "新規登録", new_user_registration_path
+          %a.js-modal-open{"data-target" => "modal02", :href => ""} ログイン
+          %br/
+          =render 'devise/sessions/new'
+          %a.js-modal-open{"data-target" => "modal01", :href => ""} 新規登録
+          %br/
+          =render 'devise/registrations/new'
