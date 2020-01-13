@@ -9,7 +9,7 @@ $(function(){
 
       if (scroll > target - windowHeight){
         $(this).css('opacity', '1');
-        $(this).css('transform', 'translateX()')
+        $(this).css('transform', 'translateX(0)')
       }
     });
     $('.forth').each(function(){
@@ -21,7 +21,7 @@ $(function(){
 
       if (scroll > target - windowHeight){
         $(this).css('opacity', '1');
-        $(this).css('transform', 'translateX()')
+        $(this).css('transform', 'translateX(0)')
       }
     });
   }
