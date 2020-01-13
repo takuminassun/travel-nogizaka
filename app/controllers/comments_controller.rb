@@ -3,6 +3,7 @@ class CommentsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :edit]
 
   def index
+    
     @comments = Comment.all
     @comment = Comment.new
     if user_signed_in?
