@@ -17,6 +17,44 @@
     position: absolute;
     top: 50%;
     transform: translate(-50%,-50%);
-    width: 60%;
+    width: 40%;
+    height: 80%;
+    text-align: center;
+    .modal-body{
+      h1{
+        font-size: 30px;
+      }
+      form{
+        .field{
+          input{
+            width: 80%;
+          }
+        }
+      }
+    }
+  }
+  &__login{
+    background: #fff;
+    left: 50%;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 40%;
+    height: 60%;
+    text-align: center;
+    .modal-body{
+      h1{
+        font-size: 30px;
+      }
+      form{
+        .field{
+          input{
+            width: 80%;
+            float: right;
+          }
+        }
+      }
+    }
   }
 }
