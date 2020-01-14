@@ -1,6 +1,7 @@
 class CommentsController < ApplicationController
   
   before_action :authenticate_user!, only: [:new, :create, :edit]
+  before_action :correct_user, only: [:edit, :update]
 
   def index
     
@@ -57,4 +58,11 @@ class CommentsController < ApplicationController
       params.require(:comment).permit(:place, :text, :image, { :member_ids => [] }).merge(user_id: current_user.id)
     end
     
+    def correct_user
+      @comment = current_user.comments.find_by(id: params[:id])
+        unless @comment
+          redirect_to root_path
+        end
+    end
+
 end

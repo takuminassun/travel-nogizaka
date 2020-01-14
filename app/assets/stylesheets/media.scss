@@ -1,0 +1,143 @@
+@media (max-width: 480px){
+
+  // トップページ
+  .all__header{
+    &__right{
+      width: 70%;
+      ul{
+        margin-left: 10px;
+        li{
+          font-size: 10px;
+          // margin あたらない
+          margin: 0 5px !important;
+          .modal__content{
+            width: 90%;
+            height: 75%;
+            input{
+              border: 1px solid;
+            }
+          }
+          .modal__login{
+            width: 90%;
+            height: 55%;
+            input{
+              border: 1px solid;
+            }
+          }
+        }
+      }
+    }
+  }
+  .first{
+    &__content{
+      height: 100%;
+      width: 300px;
+      padding: 0;
+      &__text{
+        margin-top: 50px;
+      }
+      &__btn{
+        display: block;
+        &-post{
+          margin: 20px auto;
+        }
+        &-search{
+          margin: 20px auto;
+        }
+      }
+      .note{
+        text-align: center;
+      }
+    }
+  }
+  .second{
+    height: 400px;
+    &__content{
+      padding: 0;
+      width: 300px;
+      margin: 0 auto;
+      &__text{
+        margin: 0;
+      }
+    }
+  }
+  .third{
+    &__content{
+      margin: 0 auto;
+      float: none;
+      &__text{
+        padding-top: 50px;
+      }
+    }
+  }
+  .forth{
+    &__content{
+      margin: 0 auto;
+    }
+  }
+
+  // マイページ
+  .wrappers{
+    height: 100vh;
+    .headers{
+      height: 100px;
+      &__left{
+        height: 100%;
+        &-name{
+          height: 50%;
+          line-height: 50px;
+        }
+        .user__info{
+          height: 50%;
+          bottom: 0;
+          a{
+            margin: 0;
+            width: 100%;
+          }
+        }
+      }
+    }
+    .users__contents{
+      height: 100vh;
+      width: 100vw;
+    }
+  }
+
+  // 新規投稿
+  .contents{
+    &__top{
+      left: 50px;
+      width: 150px;
+    }
+    .form{
+      width: 100%;
+      height: 100%;
+      .only__member{
+        width: 100%;
+        label{
+          width: 80px;
+          margin: 10px 0;
+        }
+      }
+      .box-2{
+        display: block;
+        .form__text{
+          width: 80%;
+          margin: 0 auto;
+          input{
+            border: 1px solid;
+          }
+          .form__review{
+            border: 1px solid #000;
+          }
+        }
+      }
+      .form__submit{
+        margin: 0 100px;
+      }
+    }
+    .footer{
+      left: 160px !important;
+    }
+  }
+}
