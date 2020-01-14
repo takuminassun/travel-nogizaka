@@ -8,7 +8,6 @@
         margin-left: 10px;
         li{
           font-size: 10px;
-          // margin あたらない
           margin: 0 5px !important;
           .modal__content{
             width: 90%;
@@ -80,19 +79,44 @@
   .wrappers{
     height: 100vh;
     .headers{
-      height: 100px;
+      height: 150px;
       &__left{
         height: 100%;
+        padding: 0;
         &-name{
           height: 50%;
           line-height: 50px;
         }
         .user__info{
-          height: 50%;
-          bottom: 0;
+          margin: 0;
           a{
             margin: 0;
             width: 100%;
+            display: block;
+          }
+        }
+      }
+      &__right{
+        &__text{
+          height: 30%;
+          &__mem{
+            font-size: 20px;
+            line-height: 30px;
+          }
+          &__change{
+            a{
+              font-size: 20px;
+              line-height: 30px;
+            }
+          }
+        }
+        &__members{
+          line-height: 0;
+          height: 70%;
+          display: block;
+          .favorite__members{
+            height: 35px;
+            margin: 0 20px 0 0;
           }
         }
       }
