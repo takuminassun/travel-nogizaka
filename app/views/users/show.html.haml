@@ -16,8 +16,9 @@
           = link_to "変更する", favorites_path
       .headers__right__members
         - @user.favorites.each do |favorites|
-          = link_to "#{favorites.member.name}", member_path(favorites.member.id), class: "mem"
-          = link_to "外す" , favorite_path(favorites.id), method: :delete, class: "delete"
+          .favorite__members
+            = link_to "#{favorites.member.name}", member_path(favorites.member.id), class: "mem"
+            = link_to "外す" , favorite_path(favorites.id), method: :delete, class: "delete"
   .users__contents
     .users__contents__text
       -if @user.comments.length > 0

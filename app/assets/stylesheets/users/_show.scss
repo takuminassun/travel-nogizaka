@@ -11,32 +11,24 @@
     display: flex;
     justify-content: space-between;
     &__left{
+      padding: 20px;
       width: 30%;
-      background: radial-gradient(#fff, #BAD3FF);
-      position: relative;
-      line-height: 180px;
-      text-align: center;
+      background-color: skyblue;
       &-name{
+        width: 50%;
+        margin: 0 auto;
         font-size: 30px;
       }
       .user__info{
-        position: absolute;
-        bottom: -70px;
+        margin: 50px 20px;
         a{
-          margin: 0 30px;
-          text-decoration: none;
-        }
-        #delete{
-          &:hover{
-            color: red;
-          }
+          margin-right: 20px;
         }
       }
-      
     }
     &__right{
       width: 70%;
-      background: radial-gradient(#fff,#FFAAFF	);
+      background-color: #FFDDFF;
       &__text{
         display: flex;
         justify-content: center;
@@ -55,20 +47,17 @@
       }
       &__members{
         margin: 0 20px;
-        a{
-          line-height: 150px;
-          font-size: 25px;
-          margin: 0 10px 20px;
-          text-decoration: none;
-          color: #000;
-        }
-        .mem{
-          border-bottom: 1px solid;
-        }
-        .delete{
-          font-size: 15px;
-          margin-right: 100px;
-          color: red;
+        display: flex;
+        .favorite__members{
+          margin: 20px 60px;
+          .mem{
+            font-size: 25px;
+            margin-right: 20px;
+          }
+          .delete{
+            font-size: 20px;
+            color: red;
+          }
         }
       }
     }
