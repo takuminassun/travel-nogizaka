@@ -164,4 +164,42 @@
       left: 160px !important;
     }
   }
+
+  // メンバー一覧
+  .member__selects{
+    .select{
+      width: 100vw;
+      &__box{
+        width: 150px;
+        height: 150px;
+        margin: 10px;
+      }
+    }
+  }
+
+  // メンバー詳細
+  .member__show{
+    .member__box{
+      width: 90%;
+    }
+    .no-member{
+      font-size: 20px;
+      #text{
+        width: 100vw;
+      }
+      a{
+        display: block;
+      }
+    }
+  }
+
+  // コメント一覧
+  .index__comments{
+    &__big{
+      width: 100%;
+    }
+    .search-form{
+      width: 100%;
+    }
+  }
 }
