@@ -1,27 +1,23 @@
-# README
+# Prigrimage
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Sacred place app  
 
-Things you may want to cover:
+聖地投稿アプリです。
 
-* Ruby version
+## Overview
 
-* System dependencies
+Application for Nogizaka Otaku by Nogizaka Otaku of Nogizaka Otaku  
 
-* Configuration
+乃木オタの乃木オタによる乃木オタのためのアプリケーション
 
-* Database creation
+## Description
 
-* Database initialization
+Post sacred places you know or find suggestions for determining your travel destination  
 
-* How to run the test suite
+あなたの知っている聖地を投稿したり、旅行の目的地を決める際の候補を探せます
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
-
-* ...
+# DB
 
 ## usersテーブル
 |Column|Type|Options|
