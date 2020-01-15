@@ -9,13 +9,14 @@
       - else
         comming soon
   -if @member.member_comments.present?
-    .select
-      - @member.member_comments.each do |m|
-        .select__box
-          .select__box__place
-            = link_to "#{m.comment.place}", comment_path(m.comment)
-          .select__box__image
-            = image_tag m.comment.image.url
+    .selects
+      .select
+        - @member.member_comments.each do |m|
+          .select__box
+            .select__box__place
+              = link_to "#{m.comment.place}", comment_path(m.comment)
+            .select__box__image
+              = image_tag m.comment.image.url
   -else
     .no-member
       = "#{@member.name} の投稿はまだありません。"

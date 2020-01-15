@@ -31,13 +31,16 @@
         .users__contents__content
           .users__contents__content__head
             .users__contents__content__head__member
+              %h6 メンバー:
               - c.member.each do |member|
                 =member.name
             .users__contents__content__head__place
+              %h6 場所:
               =c.place
           .users__contents__content__image
             = image_tag c.image.url
           .users__contents__content__comment
+            %h6 コメント:
             =c.text
           .btn
             = link_to "詳細", comment_path(c.id)
