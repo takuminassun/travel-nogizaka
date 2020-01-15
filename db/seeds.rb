@@ -1,6 +1,6 @@
 members = Member.create([{name: "秋元真夏", image: File.open("./app/assets/images/akimotomanatu.jpg")},
                         {name: "生田絵梨花", image: File.open("./app/assets/images/ikutaerika.jpg")},
-                        {name: "生駒里奈", image: File.open("./app/assets/images/rina-ikoma.jpg")},
+                        {name: "生駒里奈", image: File.open("./app/assets/images/ikomarina.jpg")},
                         {name: "伊藤万理華", image: File.open("./app/assets/images/marika_ito.jpg")},
                         {name: "井上小百合", image: File.open("./app/assets/images/inouesayuri3.jpg")},
                         {name: "衛藤美彩", image: File.open("./app/assets/images/misa_eto.jpg")},
