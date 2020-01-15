@@ -1,11 +1,23 @@
 # Prigrimage
 
-Sacred place app
+Sacred place app  
+
+聖地投稿アプリです。
+
+## Overview
+
+Application for Nogizaka Otaku by Nogizaka Otaku of Nogizaka Otaku  
+
+乃木オタの乃木オタによる乃木オタのためのアプリケーション
 
 ## Description
 
-Application for Nogizaka Otaku by Nogizaka Otaku of Nogizaka Otaku
+Post sacred places you know or find suggestions for determining your travel destination  
 
+あなたの知っている聖地を投稿したり、旅行の目的地を決める際の候補を探せます
+
+
+# DB
 
 ## usersテーブル
 |Column|Type|Options|
