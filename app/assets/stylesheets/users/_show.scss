@@ -63,6 +63,9 @@
     }
   }
   .users__contents{
+    h6{
+      margin: 0;
+    }
     width: 50%;
     margin: 0 auto;
     &__text{
@@ -74,30 +77,36 @@
       border: 1px solid;
       margin-bottom: 40px;
       &__head{
-        height: 100px;
+        height: 120px;
         position: relative;
         margin-left: 20px;
         &__member{
-          height: 50px;
+          height: 60px;
           font-size: 20px;
           line-height: 50px;
         }
         &__place{
-          height: 50px;
+          height: 60px;
           font-size: 20px;
           line-height: 50px;
         }
-        
       }
       &__image{
+        height: 50%;
+        width: 100%;
         img{
-          width: 95%;
+          width: 90%;
+          height: 100%;
+          object-fit: cover;
           margin-left: 12px;
+          background-size: cover;
         }
       }
       &__comment{
         font-size: 18px;
         margin: 5px 40px 0;
+        word-break: break-all;
+        line-height: 21px;
       }
       .btn{
         width: 100%;

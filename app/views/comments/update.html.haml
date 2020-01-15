@@ -2,4 +2,4 @@
   .success
     %h3
       更新が完了しました。
-    %a.btn{:href => "/"} Topへ戻る
+    = link_to "マイページへ戻る", user_path(current_user.id)

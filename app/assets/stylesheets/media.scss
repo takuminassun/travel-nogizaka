@@ -249,4 +249,12 @@
       }
     }
   }
+  // メンバー詳細ページ
+  .member__show{
+    .select{
+      width: 100vw;
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
 }
