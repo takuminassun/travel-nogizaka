@@ -2,6 +2,7 @@ class CommentsController < ApplicationController
   
   before_action :authenticate_user!, only: [:new, :create, :edit]
   before_action :correct_user, only: [:edit, :update]
+  before_action :set_comment, only: [:show, :destroy, :edit, :update]
 
   def index
     
@@ -22,7 +23,6 @@ class CommentsController < ApplicationController
 
   def create
     @comment = Comment.new(comment_params)
-    # binding.pry
     if @comment.save
       redirect_to user_path(current_user.id)
     else
@@ -31,22 +31,18 @@ class CommentsController < ApplicationController
   end
 
   def show
-    @comment = Comment.find(params[:id])
     @like = Like.new
   end
 
   def destroy
-    comment = Comment.find(params[:id])
-    comment.destroy
+    @comment.destroy
   end
 
   def edit
-    @comment = Comment.find(params[:id])
   end
 
   def update
-    comment = Comment.find(params[:id])
-    comment.update(comment_params)
+    @comment.update(comment_params)
   end
 
   def search
@@ -63,6 +59,10 @@ class CommentsController < ApplicationController
         unless @comment
           redirect_to root_path
         end
+    end
+
+    def set_comment
+      @comment = Comment.find(params[:id])
     end
 
 end
