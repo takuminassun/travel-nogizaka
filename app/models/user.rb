@@ -20,4 +20,6 @@ class User < ApplicationRecord
     self.favorites.exists?(member_id: member.id)
   end
 
+  validates :name, presence: true, length: { maximum: 6}
+
 end

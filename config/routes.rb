@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   
   resources :users, only: :show
   resources :members ,only: [:index, :show]
-  resources :favorites, only: [:index, :destroy] do 
+  resources :favorites, only: [:index, :destroy] do
     member do
       post "add", to: "favorites#create"
     end

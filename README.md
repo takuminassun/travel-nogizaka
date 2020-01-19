@@ -1,4 +1,4 @@
-# Prigrimage
+# Pilgrimage
 
 Sacred place app  
 
