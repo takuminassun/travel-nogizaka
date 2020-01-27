@@ -1,7 +1,8 @@
-.header
-  推しメン設定
+.admin__only
   - @users.each do |user|
-    .select_member
-      = user.name
-      = link_to "推しメンを見る", user_path(user)
-      = link_to "推しメンを決める", favorites_path
+    - user.comments.each do |comment|
+      .admin__users
+        =user.name
+        =comment.place
+        =comment.text
+        = link_to '詳細', "comments/#{comment.id}", method: :get

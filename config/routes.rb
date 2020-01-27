@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   
-  resources :users, only: :show
+  resources :users, only: [:index, :show] 
   resources :members ,only: [:index, :show]
   resources :favorites, only: [:index, :destroy] do
     member do
