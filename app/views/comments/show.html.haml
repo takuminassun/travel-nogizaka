@@ -15,9 +15,10 @@
         = @comment.text
     .show__edit
       .show____edit-btn
-        - if user_signed_in? && current_user.id == @comment.user.id || current_user.admin?
-          = link_to '編集', "/comments/#{@comment.id}/edit", method: :get
-          = link_to '削除', "/comments/#{@comment.id}", method: :delete, data: {confirm: '削除しますか'}
+        - if user_signed_in? 
+          -if current_user.id == @comment.user.id || current_user.admin?
+            = link_to '編集', "/comments/#{@comment.id}/edit", method: :get
+            = link_to '削除', "/comments/#{@comment.id}", method: :delete, data: {confirm: '削除しますか'}
       -if user_signed_in?
         %h3
           いいね件数: #{@comment.likes.count}
