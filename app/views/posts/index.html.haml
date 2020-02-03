@@ -56,5 +56,6 @@
           %br/
           =render 'devise/registrations/new'
 
-
-=link_to "管理者ページへ", users_path
+-if user_signed_in? 
+  - if current_user == @user && current_user.admin?
+    =link_to "管理者ページへ", users_path
