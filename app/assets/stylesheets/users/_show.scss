@@ -10,10 +10,11 @@
     height: 200px;
     display: flex;
     justify-content: space-between;
+    background-color: #eee;
+    border: 2px solid #ddd;
     &__left{
       padding: 20px;
       width: 30%;
-      background-color: skyblue;
       &-name{
         width: 50%;
         margin: 0 auto;
@@ -28,14 +29,11 @@
     }
     &__right{
       width: 70%;
-      background-color: #FFDDFF;
+      display: flex;
       &__text{
-        display: flex;
-        justify-content: center;
         &__mem{
           font-size: 30px;
           line-height: 90px;
-          margin-right: 70px;
         }
         &__change{
           a{
@@ -46,7 +44,6 @@
         }
       }
       &__members{
-        margin: 0 20px;
         display: flex;
         .favorite__members{
           margin: 20px 60px;

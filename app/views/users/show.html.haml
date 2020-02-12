@@ -19,6 +19,11 @@
           .favorite__members
             = link_to "#{favorites.member.name}", member_path(favorites.member.id), class: "mem"
             = link_to "外す" , favorite_path(favorites.id), method: :delete, class: "delete"
+            .select__box__image
+              -if favorites.member.image.present?
+                = image_tag favorites.member.image.url,  height: "130px"
+              - else
+                comming soon
   .users__contents
     .users__contents__text
       -if @user.comments.length > 0
